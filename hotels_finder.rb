@@ -1,6 +1,6 @@
 require "csv"
 
-class FindHotel
+class HotelFinder
   def initialize(hotel_name)
     @hotel_name = hotel_name
   end
@@ -12,5 +12,5 @@ class FindHotel
   end
 end
 
-find_hotel = FindHotel.new("./hotels.csv")
+find_hotel = HotelFinder.new("./hotels.csv")
 find_hotel.find_hotel_names
