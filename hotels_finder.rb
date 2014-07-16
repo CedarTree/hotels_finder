@@ -1,4 +1,5 @@
 require "csv"
+require "./hotels_info"
 
 class HotelFinder
   def initialize(hotel_name)
@@ -7,7 +8,7 @@ class HotelFinder
 
   def find_hotel_names
     CSV.foreach(@hotel_name, headers: true) do |row|
-      puts row["Hotel"].strip
+      puts hotels_info.name
     end
   end
 end
