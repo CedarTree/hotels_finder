@@ -1,4 +1,3 @@
-
 class HotelInfo
   def initialize(info)
     @info = info
@@ -16,7 +15,7 @@ class HotelInfo
     @info.fetch("Phone Number").strip
   end
 
-  def vacant
+  def rooms
     @info.fetch("Number of Singles").strip + @info.fetch("Number of Doubles").strip
   end
 
@@ -24,7 +23,7 @@ class HotelInfo
     puts name
     puts city
     puts phone_number
-    puts vacant
+    puts rooms
   end
 end
 
