@@ -1,4 +1,4 @@
-class HotelInfo
+class Hotel
   def initialize(info)
     @info = info
   end

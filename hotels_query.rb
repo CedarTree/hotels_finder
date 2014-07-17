@@ -9,7 +9,7 @@ class HotelQuery
 
   def print_hotel_names
     CSV.foreach(@filename, headers: true) do |row|
-      @hotels << HotelInfo.new(row)
+      @hotels << Hotel.new(row)
     end
   end
   
