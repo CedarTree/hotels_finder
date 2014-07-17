@@ -7,7 +7,7 @@ class HotelQuery
     @hotels =[]
   end
 
-  def find_hotel_info
+  def print_hotel_names
     CSV.foreach(@filename, headers: true) do |row|
       @hotels << HotelInfo.new(row)
     end
@@ -15,15 +15,15 @@ class HotelQuery
   
   def display_hotel_info
     @hotels.each do |hotel|
-     hotels.output
-   end
- end 
+      hotel.output
+    end
+  end 
 
- def find_display_hotel_info
-   find_hotel_info
-   display_hotel_info
- end
+  def print_display_hotel_info
+    print_hotel_names
+    display_hotel_info
+  end
 end
 
 query_hotel_info = HotelQuery.new("./hotels.csv")
-query_hotel_info.find_display_hotel_info
+query_hotel_info.print_display_hotel_info

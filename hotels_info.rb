@@ -16,7 +16,7 @@ class HotelInfo
   end
 
   def rooms
-    @info.fetch("Number of Singles").strip + @info.fetch("Number of Doubles").strip
+    @info.fetch("Number of Singles").to_i + @info.fetch("Number of Doubles").to_i
   end
 
   def output
@@ -26,4 +26,3 @@ class HotelInfo
     puts rooms
   end
 end
-
